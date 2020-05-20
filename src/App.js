@@ -12,9 +12,11 @@ function App() {
 
   useEffect(() => {
     console.log("useEffect called");
-  }, []);
-  //now useEffect will behave like "ComponentDidMount" and will be called only once
-  //In this array we write dependencies or use when we want conditional rendering
+  }, [no]);
+  //there we put a condition
+  //intilly useEffect will be called as ComponentDidMount
+  //& will be only call again when "no" changes
+  //will not be called when name change
   return (
     <div className="App">
       <h2>This is React Hooks</h2>
