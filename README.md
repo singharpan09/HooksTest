@@ -1,3 +1,5 @@
+`Functional Component do not have State`
+
 `Hooks is a new feature that allow to use State without using Class based Component`
 
 `till now we were thinking State as an javaScript object`
