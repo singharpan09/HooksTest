@@ -1,16 +1,13 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+//useEffect is "Mixer" of "ComponentDidMount" and "ComponentDidUpdate"
+//this method involves itself like ComponentDidMount and called Everytime whenever any state update
 import "./App.css";
 
 function App() {
   const [name, setName] = useState("Mukesh");
   const [no, setNo] = useState(21);
-  //now this will update no by "3"
-  //update number as a function
-  //"prevNo" will take the value of current "no"
+
   const Increment = () => {
-    setNo((prevNo) => prevNo + 1);
-    setNo((prevNo) => prevNo + 1);
     setNo((prevNo) => prevNo + 1);
   };
   return (
@@ -25,4 +22,3 @@ function App() {
 }
 
 export default App;
-//this is the correct approch for updating the state
