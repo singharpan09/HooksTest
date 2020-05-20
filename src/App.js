@@ -4,6 +4,11 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import "./App.css";
 
 const Home = () => {
+  useEffect(() => {
+    console.log("useEffect called");
+  }, []);
+  //we are calling useEffect in homw component
+  //this is now equivalent to ComponentDidMount
   return (
     <React.Fragment>
       <h3>This is Home Component</h3>
@@ -20,10 +25,6 @@ const About = () => {
 };
 
 function App() {
-  useEffect(() => {
-    console.log("useEffect called");
-  }, []);
-
   return (
     <BrowserRouter>
       <div className="App">
