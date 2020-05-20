@@ -5,12 +5,11 @@ import "./App.css";
 function App() {
   const [name, setName] = useState("Mukesh");
   const [no, setNo] = useState(21);
-  //Clicking on increment button should increase number by "3"
-  //but this is not happing...setNo() is not always getting the previous updated state
+  //now this will update no by "3"
   const Increment = () => {
-    setNo(no + 1);
-    setNo(no + 1);
-    setNo(no + 1);
+    setNo((prevNo) => prevNo + 1);
+    setNo((prevNo) => prevNo + 1);
+    setNo((prevNo) => prevNo + 1);
   };
   return (
     <div className="App">
@@ -24,8 +23,4 @@ function App() {
 }
 
 export default App;
-//functional component don't use "this" keyword
-//now in hooks state do not necessarly be javascript object
-//there can be multiple state
-//state can be number,string,boolean,arrya..etc
-//now age will be not be effective..b'coz they both are different
+//this is the correct approch for updating the state
