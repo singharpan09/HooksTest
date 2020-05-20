@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -10,3 +10,7 @@ function App() {
 }
 
 export default App;
+
+//http://www.icndb.com/api/
+//API
+//http://api.icndb.com/jokes/random?firstName=John&amp;lastName=Doe
