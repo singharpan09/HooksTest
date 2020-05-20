@@ -18,15 +18,12 @@ function App() {
   useEffect(() => {
     newJoke(fname, lname);
   }, []);
-  //initlly we will pass "fname" and "lname"
-  //initllly newJoke will be called when Componentmount
-  //then will fetch new joke onCLick event
-  //now we will fetch joke with our given name
+
   return (
     <React.Fragment>
       <div className="App">
         <h1>This is Test App</h1>
-        <button onClick={() => newJoke()}>Get New Joke</button>
+        <button onClick={() => newJoke(fname, lname)}>Get New Joke</button>
         <h4>{joke}</h4>
       </div>
     </React.Fragment>
