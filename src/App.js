@@ -1,30 +1,36 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import "./App.css";
 
+const Home = () => {
+  return (
+    <React.Fragment>
+      <h3>This is Home Component</h3>
+      <Link to="/about">go to about</Link>
+    </React.Fragment>
+  );
+};
+const About = () => {
+  return (
+    <React.Fragment>
+      <h3>This is About Component</h3>
+    </React.Fragment>
+  );
+};
+
 function App() {
-  const [name, setName] = useState("Mukesh");
-  const [no, setNo] = useState(21);
-
-  const Increment = () => {
-    setNo((prevNo) => prevNo + 1);
-  };
-
   useEffect(() => {
     console.log("useEffect called");
-  }, [name]);
-  //there we put a condition
-  //intilly useEffect will be called as ComponentDidMount
-  //& will only be called when name update
-  //& will not call when "no" update
+  }, []);
+
   return (
-    <div className="App">
-      <h2>This is React Hooks</h2>
-      <p>{name}</p>
-      <p>{no}</p>
-      <button onClick={() => setName("Rahul")}>change Name</button>
-      <button onClick={() => Increment()}>Increase age</button>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+      </div>
+    </BrowserRouter>
   );
 }
 
