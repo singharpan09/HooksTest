@@ -12,12 +12,11 @@ function App() {
       <h2>This is React Hooks</h2>
       <p>{data.name}</p>
       <p>{data.age}</p>
+      <button onClick={() => setdata({ name: "Rahul" })}>change Name</button>
     </div>
   );
 }
 
 export default App;
-//this is showing the state
-//This is basically destructuring for pulling the data (name can be any name)
-//"data" will be used to show the state data
-//"setdata" will be used to change the data (like setState in class component)
+//this is like setState to change the state
+//but here is a problem...while changing the name here...age data will be lost
