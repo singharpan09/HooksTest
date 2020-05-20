@@ -20,7 +20,7 @@ function App() {
   }, [fname, lname]);
 
   //now useEffect will call the API whenever any change in "fname" or "lname" happens
-
+  //we can use more than one useEffect according to our needs
   return (
     <React.Fragment>
       <div className="App">
