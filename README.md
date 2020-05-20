@@ -9,3 +9,5 @@
 `Now,in React Hooks...state can be anything...Array,Object,string,number,boolean....`
 
 `We can have Multiples state in React Hooks`
+
+`const [a,b]=[1,2]..here "a" will be "1" & "b" will be "2"...this is destructuring`
