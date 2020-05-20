@@ -3,8 +3,12 @@ import "./App.css";
 
 function App() {
   const [joke, setjoke] = useState("loading");
-  const newJoke = () => {
-    fetch("http://api.icndb.com/jokes/random?firstName=John&lastName=Doe")
+  const [fname, setfname] = useState("john");
+  const [lname, setlname] = useState("doe");
+  const newJoke = (firstname, lastname) => {
+    fetch(
+      `http://api.icndb.com/jokes/random?firstName=${firstname}&lastName=${lastname}`
+    )
       .then((res) => res.json())
       .then((res2) => {
         console.log(res2);
@@ -12,8 +16,9 @@ function App() {
       });
   };
   useEffect(() => {
-    newJoke();
+    newJoke(fname, lname);
   }, []);
+  //initlly we will pass "fname" and "lname"
   //initllly newJoke will be called when Componentmount
   //then will fetch new joke onCLick event
   //now we will fetch joke with our given name
