@@ -11,9 +11,8 @@ function App() {
       <h2>This is React Hooks</h2>
       <p>{name}</p>
       <p>{age}</p>
-      {/* <button onClick={() => setdata({ ...data, name: "Rahul" })}>
-        change Name
-      </button> */}
+      <button onClick={() => setName("Rahul")}>change Name</button>
+      <button onClick={() => setAge(age + 1)}>Increase age</button>
     </div>
   );
 }
@@ -22,3 +21,4 @@ export default App;
 //now in hooks state do not necessarly be javascript object
 //there can be multiple state
 //state can be number,string,boolean,arrya..etc
+//now age will be not be effective..b'coz they both are different
