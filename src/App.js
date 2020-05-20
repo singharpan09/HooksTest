@@ -17,7 +17,9 @@ function App() {
   };
   useEffect(() => {
     newJoke(fname, lname);
-  }, []);
+  }, [fname, lname]);
+
+  //now useEffect will call the API whenever any change in "fname" or "lname" happens
 
   return (
     <React.Fragment>
@@ -33,12 +35,13 @@ function App() {
           value={lname}
           onChange={(e) => setlname(e.target.value)}
         />
-        <button onClick={() => newJoke(fname, lname)}>Get New Joke</button>
+
         <h4>{joke}</h4>
       </div>
     </React.Fragment>
   );
 }
+//now will fetch the new joke without click event
 //name passed from input field to joke API
 export default App;
 
