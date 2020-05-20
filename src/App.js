@@ -12,11 +12,11 @@ function App() {
 
   useEffect(() => {
     console.log("useEffect called");
-  }, [no]);
+  }, [name]);
   //there we put a condition
   //intilly useEffect will be called as ComponentDidMount
-  //& will be only call again when "no" changes
-  //will not be called when name change
+  //& will only be called when name update
+  //& will not call when "no" update
   return (
     <div className="App">
       <h2>This is React Hooks</h2>
