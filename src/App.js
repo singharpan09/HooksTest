@@ -10,6 +10,10 @@ function App() {
   const Increment = () => {
     setNo((prevNo) => prevNo + 1);
   };
+
+  useEffect(() => {
+    console.log("useEffect called");
+  });
   return (
     <div className="App">
       <h2>This is React Hooks</h2>
