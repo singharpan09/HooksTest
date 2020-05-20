@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-//useEffect is "Mixer" of "ComponentDidMount" and "ComponentDidUpdate"
-//this method involves itself like ComponentDidMount and called Everytime whenever any state update
-//useEffect is a callback function
-//But some time this behiour of useEffect can create problem..like when we are fetching some data..and then fetching another data from another API
-//First API will be called again beacuse of its featuer like "ComponetDdiUpdate"
-//so we need to change it's behavoiur as per our need
+
 import "./App.css";
 
 function App() {
@@ -17,7 +12,9 @@ function App() {
 
   useEffect(() => {
     console.log("useEffect called");
-  });
+  }, []);
+  //now useEffect will behave like "ComponentDidMount" and will be called only once
+  //In this array we write dependencies or use when we want conditional rendering
   return (
     <div className="App">
       <h2>This is React Hooks</h2>

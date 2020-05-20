@@ -15,3 +15,7 @@
 `useEffect Hooks is mixer of ComponentDidMount and ComponentDidUpdate`
 
 `useEffect method invokes itself like "ComponentDidMount" and called Everytime whenever any state change like "ComponentDidUpdate"`
+
+`useEffect(() => {console.log("useEffect called");}, []);`
+
+'here is [] we write dependencies or conditional rendering`
