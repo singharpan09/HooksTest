@@ -3,9 +3,12 @@ import "./App.css";
 import NavBar from "./NavBar";
 import { BrowserRouter, Route } from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
+  console.log(props);
   return <React.Fragment>This is Home component</React.Fragment>;
 };
+
+//all components get props from router
 
 const About = () => {
   return <React.Fragment>This is About component</React.Fragment>;
