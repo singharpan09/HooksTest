@@ -8,7 +8,7 @@ const Ref = () => {
 
   useEffect(() => {
     console.log(myheading.current.innerHTML);
-    console.log(input.current);
+    input.current.focus();
   }, []);
   //get the value of input
   //this gives access to input tag and heading tag
