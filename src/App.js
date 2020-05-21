@@ -1,7 +1,13 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./NavBar";
-import { BrowserRouter, Route, useHistory, useParams } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  useHistory,
+  useParams,
+  Switch,
+} from "react-router-dom";
 
 //now will use "useHistory" hooks to access history  used for redirection
 //now we have access of all history
@@ -56,21 +62,24 @@ const Profile = () => {
     </React.Fragment>
   );
 };
+//switch make shure that only one route is true at time
 function App() {
   return (
     <React.Fragment>
       <BrowserRouter>
         <div className="App">
           <NavBar />
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/profile/:id">
-            <Profile />
-          </Route>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/profile/:id">
+              <Profile />
+            </Route>
+          </Switch>
         </div>
       </BrowserRouter>
     </React.Fragment>
