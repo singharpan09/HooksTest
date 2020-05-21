@@ -1,11 +1,20 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./NavBar";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, useHistory } from "react-router-dom";
 
-const Home = (props) => {
-  console.log(props);
-  return <React.Fragment>This is Home component</React.Fragment>;
+//now will use "useHistory" hooks to access history  used for redirection
+//now we have access of all history
+const Home = () => {
+  const history = useHistory();
+  console.log(history);
+  return (
+    <React.Fragment>
+      <h3>This is Home component</h3>
+
+      <a className="waves-effect waves-light btn">Navigate to about</a>
+    </React.Fragment>
+  );
 };
 
 //all components get props from router
