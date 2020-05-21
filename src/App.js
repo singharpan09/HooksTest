@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Ref from "./useRef";
 
 function App() {
   const [joke, setjoke] = useState("loading");
@@ -24,6 +25,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
+        <Ref />
         <h1>This is Test App</h1>
         <input
           type="text"
