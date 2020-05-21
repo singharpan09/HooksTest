@@ -42,6 +42,8 @@ const About = () => {
 };
 //goBack will take you to previous screen
 //then will change stack sequence and navigate
+//first url get PUSH to stack and then POP from stack
+//stack concept is used in url pushing and poping
 const Profile = () => {
   return <React.Fragment>This is Profile component</React.Fragment>;
 };
