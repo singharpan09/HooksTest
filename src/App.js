@@ -33,14 +33,15 @@ const About = () => {
 
       <button
         className="btn waves-effect waves-light"
-        onClick={() => history.push("/")}
+        onClick={() => history.goBack()}
       >
         Back to Home
       </button>
     </React.Fragment>
   );
 };
-
+//goBack will take you to previous screen
+//then will change stack sequence and navigate
 const Profile = () => {
   return <React.Fragment>This is Profile component</React.Fragment>;
 };
