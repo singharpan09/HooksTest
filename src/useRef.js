@@ -7,9 +7,10 @@ const Ref = () => {
   const input = useRef(null);
 
   useEffect(() => {
-    console.log(myheading.current);
+    console.log(myheading.current.innerHTML);
     console.log(input.current);
   }, []);
+  //get the value of input
   //this gives access to input tag and heading tag
   //have to extact value from it
   return (
