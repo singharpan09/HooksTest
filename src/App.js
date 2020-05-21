@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./NavBar";
-import { BrowserRouter, Route, useHistory } from "react-router-dom";
+import { BrowserRouter, Route, useHistory, useParams } from "react-router-dom";
 
 //now will use "useHistory" hooks to access history  used for redirection
 //now we have access of all history
+//useParams inilialized for using the "params"
 const Home = () => {
   const history = useHistory();
   console.log(history);
