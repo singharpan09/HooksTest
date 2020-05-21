@@ -47,11 +47,12 @@ const About = () => {
 //stack concept is used in url pushing and poping
 //will use params in profile components
 const Profile = () => {
-  const params = useParams();
-  console.log(params);
+  const { id } = useParams();
+  console.log(id);
   return (
     <React.Fragment>
       <h3>This is Profile component</h3>
+      <h4>your params id is {id}</h4>
     </React.Fragment>
   );
 };
