@@ -1,10 +1,17 @@
 //here will use "useref" hook in functional component
 
-import React, { useref, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 //initial value of ref is assignned as null
 const Ref = () => {
-  const myheading = useref(null);
-  const input = useref(null);
+  const myheading = useRef(null);
+  const input = useRef(null);
+
+  useEffect(() => {
+    console.log(myheading.current);
+    console.log(input.current);
+  }, []);
+  //this gives access to input tag and heading tag
+  //have to extact value from it
   return (
     <React.Fragment>
       <h3 ref={myheading}>This is ref Title</h3>
