@@ -1,6 +1,6 @@
 //here will use "useref" hook in functional component
 
-import React, { useref } from "react";
+import React, { useref, useEffect } from "react";
 //initial value of ref is assignned as null
 const Ref = () => {
   const myheading = useref(null);
