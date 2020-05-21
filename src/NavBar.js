@@ -1,22 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <React.Fragment>
       <nav>
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo">
+          <Link to="#" className="brand-logo">
             Logo
-          </a>
+          </Link>
           <ul id="nav-mobile" className="right">
             <li>
-              <a href="sass.html">Sass</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="badges.html">Components</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="collapsible.html">JavaScript</a>
+              <Link to="/profile">Profile</Link>
             </li>
           </ul>
         </div>
