@@ -9,6 +9,7 @@ const Home = (props) => {
 };
 
 //all components get props from router
+//now no props  will be avilable to the components
 
 const About = () => {
   return <React.Fragment>This is About component</React.Fragment>;
