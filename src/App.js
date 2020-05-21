@@ -8,7 +8,7 @@ import { BrowserRouter, Route, useHistory, useParams } from "react-router-dom";
 //useParams inilialized for using the "params"
 const Home = () => {
   const history = useHistory();
-  console.log(history);
+
   return (
     <React.Fragment>
       <h3>This is Home component</h3>
@@ -45,8 +45,15 @@ const About = () => {
 //then will change stack sequence and navigate
 //first url get PUSH to stack and then POP from stack
 //stack concept is used in url pushing and poping
+//will use params in profile components
 const Profile = () => {
-  return <React.Fragment>This is Profile component</React.Fragment>;
+  const params = useParams();
+  console.log(params);
+  return (
+    <React.Fragment>
+      <h3>This is Profile component</h3>
+    </React.Fragment>
+  );
 };
 function App() {
   return (
@@ -60,7 +67,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/profile">
+          <Route path="/profile/:id">
             <Profile />
           </Route>
         </div>
