@@ -26,7 +26,19 @@ const Home = () => {
 //now no props  will be avilable to the components
 
 const About = () => {
-  return <React.Fragment>This is About component</React.Fragment>;
+  const history = useHistory();
+  return (
+    <React.Fragment>
+      <h3>This is About component</h3>
+
+      <button
+        className="btn waves-effect waves-light"
+        onClick={() => history.push("/")}
+      >
+        Back to Home
+      </button>
+    </React.Fragment>
+  );
 };
 
 const Profile = () => {
