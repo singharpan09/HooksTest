@@ -23,9 +23,15 @@ function App() {
       <BrowserRouter>
         <div className="App">
           <NavBar />
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/profile" component={Profile} />
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
         </div>
       </BrowserRouter>
     </React.Fragment>
