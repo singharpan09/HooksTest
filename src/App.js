@@ -12,6 +12,7 @@ import {
 //now will use "useHistory" hooks to access history  used for redirection
 //now we have access of all history
 //useParams inilialized for using the "params"
+//this is a test
 const Home = () => {
   const history = useHistory();
 
