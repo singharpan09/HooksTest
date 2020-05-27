@@ -23,9 +23,7 @@ function App() {
             <Route path="/profile">
               <Profile />
             </Route>
-            <Route>
-              <PagenotFound />
-            </Route>
+            <Route render={() => <div>This is page not found</div>} />>
           </Switch>
         </div>
       </BrowserRouter>
