@@ -1,8 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Route, useRouteMatch } from "react-router-dom";
 
 const About = () => {
   const history = useHistory();
+  const match = useRouteMatch();
+  console.log(history);
   return (
     <React.Fragment>
       <h3>This is About component</h3>
@@ -13,6 +15,10 @@ const About = () => {
       >
         Back to Home
       </button>
+      <Route
+        path={`${match.url}/about2`}
+        render={() => <div>Hello nested roue</div>}
+      />
     </React.Fragment>
   );
 };
